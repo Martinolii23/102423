@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void fibonacci(int n) {
+    if (n <= 0) {
+        return;
+    }
+
+    int a = 0, b = 1;
+    int p;
+    printf("1) %d\n", a);
+
+    for (int i = 2; i <= n; i++) {
+        printf("%d) %d\n", i, b);
+        p = a + b;
+        a = b;
+        b = p;
+    }
+}
+
+int main() {
+    int numero;
+    printf("\t\t\t\t\t**SERIE DE FIBONACCI**\n");
+    printf("Ingresa el numero de terminos de la serie de Fibonacci que deseas ver: ");
+    scanf("%d", &numero);
+
+    printf("Los Terminos de la serie de Fibonacci son:\n");
+    fibonacci(numero);
+
+    return 0;
+}
